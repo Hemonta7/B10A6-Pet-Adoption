@@ -19,7 +19,106 @@
 </head>
 
 <body>
+    <!-- nav section  -->
+    <nav class="flex justify-between items-center w-11/12 mx-auto my-12">
+        <div class="flex gap-2 items-center">
+            <img class="w-7 h-7" src="./images/logo.webp" alt="">
+            <h2 class="text-black font-black text-3xl">Peddy</h2>
+        </div>
+        <div class="space-x-8">
+            <a class="text-gray-500 text-xl font-normal " href="">Home</a>
+            <a class="text-gray-500 text-xl font-normal " href="">Shop</a>
+            <a class="text-gray-500 text-xl font-normal " href="">Contact</a>
+        </div>
+        <div class="bg-white p-2 rounded-full border-2">
+            <img src="./images/Frame.png" alt="">
+        </div>
+    </nav>
+    <!-- Bringing Families section  -->
+    <section class="w-2/3 mx-auto">
+            <div class="text-center space-y-6">
+                <h5 class="text-gray-500 font-bold text-2xl">Bringing Families Together ❤️</h5>
+                <h1 class="text-7xl font-black text-black">Your Path to Adoption Starts Here</h1>
+                <p class="text-xl  font-normal">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+                    layout. The point of using Lorem Ipsum is that it has a.</p>
+            </div>
+        <div class="text-center my-6">
+            <a href="#main"><button class="btn bg-common text-white">View More</button></a>
+        </div>
+        <div class="mb-16">
+            <img src="./images/pet.webp" alt="">
+        </div>
+        <div class="text-center space-y-5 mb-9">
+            <h4 class="text-4xl font-black">Adopt Your Best Friend</h4>
+            <p class="text-xl text-gray-500 font-normal">It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its
+                layout. The point of using Lorem Ipsum is that it has a.</p>
+        </div>
+    </section>
+    <main id="main">
+    </main>
+    <!-- footer section -->
+<footer class="bg-black flex justify-between p-20">
+    <nav class="space-y-3">
+        <div class="flex items-center gap-2 mb-6">
+            <img class="w-7 h-6" src="./images/logo.webp" alt="">
+            <h6 class="text-3xl font-black text-white">Peddy</h6>
+        </div>
+        <p class="text-gray-400">Location: av. Washington 165, NY CA 54003</p>
+        <p class="text-gray-400">Phone: +31 85 964 47 25</p>
+        <p class="text-gray-400">Email: info@yourdomain.com</p>
+        <p class="text-gray-400">Openings hours: 9.00 AM - 5.00 PM</p>
+        <div class="grid grid-flow-col gap-1">
+            <a>
+                <img src="./images/Group 2.png" alt="">
+            </a>
+            <a>
+                <img src="./images/x-2 1.png" alt="">
+            </a>
+            <a>
+                <img src="./images/Group 6.png" alt="">
+            </a>
+            <a>
+                <img src="./images/instagram-2016-5 1.png" alt="">
+            </a>
+        </div>
+    </nav>
+    <nav class="flex flex-col gap-3">
+        <h6 class="text-xl font-bold mb-6 text-white">Useful Links</h6>
+        <a class="link link-hover text-gray-400">Home</a>
+        <a class="link link-hover text-gray-400">About Us</a>
+        <a class="link link-hover text-gray-400">Animals</a>
+        <a class="link link-hover text-gray-400">Foundation</a>
+        <a class="link link-hover text-gray-400">Contact</a>
+    </nav>
+    <nav class="space-y-3">
+        <h6 class="text-xl font-bold mb-6 text-white">Drop a Message</h6>
+        <label class="input input-bordered flex items-center gap-2 bg-slate-800">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 text-gray-400">
+                <path
+                    d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                <path
+                    d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+            </svg>
+            <input type="text" class="grow text-white" placeholder="Email" />
+        </label>
+        <button class="bg-common btn px-[84px] text-white text-base border-none">Subscribe</button>
+    </nav>
+
+</footer>
 <script src="./js/app.js"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                    common: '#0E7A81',
+                }
+            }
+        }
+    }
+</script>
 </body>
 
 </html>
