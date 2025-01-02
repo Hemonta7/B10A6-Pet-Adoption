@@ -1,3 +1,26 @@
+// like Button
+const likeButton=async(petId)=>{
+    try {
+      const res = await fetch(
+        `https://openapi.programming-hero.com/api/peddy/pet/${petId}`
+      );
+      const data = await res.json();
+      likeButtonDisplay(data.petData);
+    } catch (err) {
+      console.log("ERROR:", err);
+    }
+}
+
+likeButtonDisplay=(petData)=>{
+const photoContainer = document.getElementById("showPhoto");
+const div=document.createElement("div")
+div.innerHTML=`
+<img src="${petData.image}"/>
+`;
+photoContainer.appendChild(div);
+}
+
+// details button by modal 
 const loadDetails=async(petId)=>{
 try {
     const res = await fetch(
@@ -48,6 +71,7 @@ modalContent.innerHTML = `
 document.getElementById("myModal").showModal();
 }
 
+// to use color remove from category button
 const removeActiveClass=()=>{
     const categoryBtn = document.getElementsByClassName("category-btn");
     for(const btn of categoryBtn){
@@ -55,6 +79,7 @@ const removeActiveClass=()=>{
     }
 }
 
+// click button and show category wise pets
 const loadCatergoryPets=async(category)=>{
   try {
     const res = await fetch(
@@ -70,6 +95,7 @@ const loadCatergoryPets=async(category)=>{
   }
 }
 
+// category wise three button 
 const loadCategories = async () => {
   try {
     const res = await fetch(
@@ -98,18 +124,6 @@ const displayCategories = (category) => {
   });
 };
 
-const loadAllPets = async () => {
-  try {
-    const res = await fetch(
-      "https://openapi.programming-hero.com/api/peddy/pets"
-    );
-    const data = await res.json();
-    displayAllPets(data.pets);
-  } catch (err) {
-    console.log("ERROR:", err);
-  }
-};
-
 // {
 //     "petId": 1,
 //     "breed": "Golden Retriever",
@@ -122,6 +136,19 @@ const loadAllPets = async () => {
 //     "vaccinated_status": "Fully",
 //     "pet_name": "Sunny"
 // }
+
+// show all pets 
+const loadAllPets = async () => {
+  try {
+    const res = await fetch(
+      "https://openapi.programming-hero.com/api/peddy/pets"
+    );
+    const data = await res.json();
+    displayAllPets(data.pets);
+  } catch (err) {
+    console.log("ERROR:", err);
+  }
+};
 
 const displayAllPets = (pets) => {
   const gridContainer = document.getElementById("gridContainer");
@@ -169,7 +196,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                 </div>
                 <hr class="my-2">
                 <div class="flex justify-around">
-                <button class="btn text-common bg-transparent border-2"><img class="w-8 h-8" src="https://img.icons8.com/?size=64&id=66627&format=png"/></button>
+                <button onclick="likeButton(${pets.petId})" class="btn text-common bg-transparent border-2"><img class="w-8 h-8" src="https://img.icons8.com/?size=64&id=66627&format=png"/></button>
                 <button class="btn text-common bg-transparent border-2">Adopt</button>
                 <button onclick="loadDetails(${pets.petId})" class="btn text-common bg-transparent border-2">Details</button>
                 </div>                    
