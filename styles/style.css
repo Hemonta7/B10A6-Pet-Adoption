@@ -4,3 +4,7 @@
     font-family: "Lato", serif;
 }
 
+.active{
+    background-color: rgba(14, 121, 129, 0.178);
+    color: white;
+}
