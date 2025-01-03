@@ -42,7 +42,7 @@ const loadDetailsDisplay = (petData) => {
                                         </div>
                     <div class="flex gap-4 my-2">
                     <div class="flex gap-1">
-                       <img src="../images/Frame4.png"/>
+                       <img src="./images/Frame4.png"/>
                         ${
                           petData.breed == null || petData.breed == undefined
                             ? `<p class=" flex text-lg font-normal text-gray-500">Breed: Not Applicable</p>`
@@ -50,7 +50,7 @@ const loadDetailsDisplay = (petData) => {
                         }
                     </div>
                     <div class="flex gap-1">
-                       <img src="../images/Frame1.png"/>
+                       <img src="./images/Frame1.png"/>
                         ${
                           petData.date_of_birth == null ||
                           petData.date_of_birth == undefined
@@ -59,9 +59,9 @@ const loadDetailsDisplay = (petData) => {
                         }
                     </div>
                     </div>
-                    <div class="flex gap-10 my-2">
+                    <div class="flex gap-8 my-2">
                     <div class="flex gap-1">
-                       <img src="../images/Frame2.png"/>
+                       <img src="./images/Frame2.png"/>
                         ${
                           petData.gender == null || petData.gender == undefined
                             ? `<p class=" flex text-lg font-normal text-gray-500">Gender: Not Applicable</p>`
@@ -69,7 +69,7 @@ const loadDetailsDisplay = (petData) => {
                         }
                     </div>
                     <div class="flex gap-1">
-                       <img src="../images/Frame3.png"/>
+                       <img src="./images/Frame3.png"/>
                         ${
                           petData.price == null || petData.price == undefined
                             ? `<p class=" flex text-lg font-normal text-gray-500">Price: Not Applicable</p>`
@@ -78,7 +78,7 @@ const loadDetailsDisplay = (petData) => {
                     </div>
                     </div>
                     <div class="flex gap-1">
-                       <img src="../images/Frame5.png"/>
+                       <img src="./images/Frame5.png"/>
                         ${
                           petData.vaccinated_status == null ||
                           petData.vaccinated_status == undefined
@@ -186,7 +186,7 @@ const displayAllPets = (pets) => {
     gridContainer.classList.remove("grid");
     gridContainer.innerHTML = `
     <div class="flex flex-col items-center p-4 bg-gray-100 rounded-3xl shadow-lg">
-    <img class="w-40" src="../images/error.webp" />
+    <img class="w-40" src="./images/error.webp" />
     <h3 class="text-3xl font-bold">No Information Available</h3>
     <p class="text-base font-medium text-gray-600 w-2/3 mx-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at 
 its layout. The point of using Lorem Ipsum is that it has a.</p>
@@ -208,7 +208,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                 <div class="space-y-1">
                 <h4 class="text-xl font-bold">${pets.pet_name}</h4>
                     <div class="flex gap-1">
-                       <img src="../images/Frame4.png"/>
+                       <img src="./images/Frame4.png"/>
                                              ${
                                                (pets.breed == pets.breed) ==
                                                  null || pets.breed == undefined
@@ -217,7 +217,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                                              }
                     </div>
                     <div class="flex gap-1">
-                       <img src="../images/Frame1.png"/>
+                       <img src="./images/Frame1.png"/>
                         ${
                           pets.date_of_birth == null ||
                           pets.date_of_birth == undefined
@@ -226,7 +226,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                         }
                     </div>
                     <div class="flex gap-1">
-                       <img src="../images/Frame2.png"/>
+                       <img src="./images/Frame2.png"/>
                         ${
                           pets.gender == null || pets.gender == undefined
                             ? `<p class=" flex text-lg font-normal text-gray-500">Gender: Not Applicable</p>`
@@ -234,7 +234,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                         }
                     </div>
                     <div class="flex gap-1">
-                       <img src="../images/Frame3.png"/>
+                       <img src="./images/Frame3.png"/>
                         ${
                           pets.price == null || pets.price == undefined
                             ? `<p class=" flex text-lg font-normal text-gray-500">Price: Not Applicable</p>`
